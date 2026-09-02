@@ -18,19 +18,16 @@ Built out of a real need: sending 300+ hackathon certificates as personalized PD
 
 Two independent modules, no cross-imports between them:
 
-- **`certificate/`** — takes participant data + an HTML template, returns a rendered PDF. Knows nothing about email.
-- **`mailer/`** — takes a recipient, subject, body, and attachment, sends it. Knows nothing about certificates. Provider-agnostic via a `BaseMailer` interface.
-- **`orchestrator.py`** — the CLI glue: loads participants → generates certificates → sends emails → tracks status. This is the only piece that depends on both modules.
+- **`certgen/`** — takes participant data + an HTML template, returns a rendered PDF.
+- **`mailer/`** — takes a recipient, subject, body, and attachment, sends it. Provider-agnostic via a `BaseMailer` interface.
+
 
 This split means either module can be imported directly into another system (e.g. a web backend) without pulling in the CLI or the tracking layer.
 
 ## Tech Stack
 
 - Python
-- Jinja2 + WeasyPrint — HTML template → PDF
-- SMTP / Brevo — email sending (swappable)
-- SQLite — send-status tracking
-- Typer — CLI
+
 
 ## Usage
 
