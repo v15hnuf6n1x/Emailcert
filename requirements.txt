@@ -9,7 +9,7 @@ cairocffi==1.7.1
 defusedxml==0.7.1
 tinycss2==1.5.1
 cssselect2==0.8.0
-python-dotenv==1.1.0
+python-dotenv==1.2.2
 
 # System dependency for cairosvg (Ubuntu/Debian):
 # sudo apt-get install libcairo2
