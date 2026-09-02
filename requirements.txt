@@ -1,0 +1,15 @@
+# Certificate Generation (production)
+# Tested on Python 3.12, Ubuntu 22.04/24.04
+pillow==12.3.0
+pandas==3.0.5
+openpyxl==3.1.5
+cairosvg==2.9.0
+# cairosvg dependencies (auto-installed, pinned for reproducibility)
+cairocffi==1.7.1
+defusedxml==0.7.1
+tinycss2==1.5.1
+cssselect2==0.8.0
+python-dotenv==1.1.0
+
+# System dependency for cairosvg (Ubuntu/Debian):
+# sudo apt-get install libcairo2
