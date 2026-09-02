@@ -2,35 +2,77 @@
 .history/
 .venv/
 venv/
-.env
-.env.local
+.env/
+.venv*/
+venv*/
 
 # Python
 __pycache__/
 *.py[cod]
+*$py.class
 *.pyo
 *.pyd
-*.egg-info/
-dist/
+.Python
 build/
+develop-eggs/
+dist/
+downloads/
+eggs/
 .eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
 *.egg
 
-# Testing / typing
+# Coverage & Testing
+.coverage
+.coverage.*
+htmlcov/
 .pytest_cache/
 .mypy_cache/
-.coverage
-htmlcov/
 .tox/
+.nox/
+coverage.xml
+*.cover
+.hypothesis/
 
-# OS / IDE
-.DS_Store
-Thumbs.db
+# Editors & OS
 .vscode/
 .idea/
 *.swp
 *.swo
+*~
+.DS_Store
+Thumbs.db
 
-# Project output
+# Environment - keep example, ignore real
+.env
+.env.local
+.env.*.local
+!.env.example
+!example.env
+
+# Project output (from upstream + our generated)
 certificates/
+certificates_final_test/
+certificates_demo/
+certificates_test_one_col/
+draft_test/
+draft test/
+Draft Test/
+certificates_*/
 *.log
+*.out
+
+# Keep these (ensure not ignored)
+!requirements.txt
+!pyproject.toml
+!README.md
+!emailcert/certgen/src/template.png
+!emailcert/certgen/src/cert-img.png
+!emailcert/certgen/fonts/*.ttf
