@@ -47,6 +47,18 @@ class OverlayError(CertificateError):
     """
     pass
 
+class TemplateNotFoundError(CertificateError):
+    """
+    Raised when template PNG/SVG file not found.
+
+    Examples:
+    - file not found at exact path
+    - not found in fallback locations (./, events/sparkverse/)
+    """
+
+    pass
+
+
 class InvalidParticipationError(CertificateError):
     """
     Raised when Participant datas Validation fails.
@@ -57,9 +69,18 @@ class InvalidParticipationError(CertificateError):
     -Email Doesnt contains @
     -invalid characters in name/team
     """
+
     pass
 
-class OutputError(Certificate):
+
+# Alias for spec compliance - plan.md uses InvalidParticipantError
+class InvalidParticipantError(InvalidParticipationError):
+    """Alias for InvalidParticipationError (spec name)."""
+
+    pass
+
+
+class OutputError(CertificateError):
     """
     Raised When Cannot write output file.
     eg:
