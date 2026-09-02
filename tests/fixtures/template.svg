@@ -1,0 +1,5 @@
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1920" height="1080" fill="white"/>
+    <text id="name" x="960" y="350" font-size="60" text-anchor="middle" font-family="Arial">Placeholder</text>
+    <text id="team" x="960" y="500" font-size="40" text-anchor="middle" font-family="Arial">Team</text>
+</svg>
